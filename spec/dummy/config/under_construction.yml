@@ -1,0 +1,33 @@
+theme: 'site-under-construction'
+launch_time: "May 27 7pm"
+progress: "60" # Percent
+progress_label: "Progress"
+info:
+  site_title: "My Website"
+  logo_url: "logo.png"
+  email: "support@mywebsite.com"
+  phone: "phone : 555-123456"
+  heading: "This website is under construction"
+  counter_heading: "Estimated Time Remaining Before Launch:"
+  about_title: "Some words about us"
+  about_content: |
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                  Phasellus hendrerit. Pellentesque aliquet nibh nec urna. I
+                  n nisi neque, aliquet vel, dapibus id, mattis vel, nisi.
+  inform_by_email: "Type your email id to get the updates!"
+  email_field_value: "Enter Your E-mail"
+  copyright: "Copyright &copy;"
+site_developer:
+  name: "Great Developer"
+socials_title: "You may find us below:"
+socials:
+  twitter: "#" #Full URL: twitter.com/great_developer
+  facebook: "#"
+  yahoo: "#"
+  # stumbleupon: "#"
+  flickr: "#"
+  #google: "#"
+  youtube: "#"
+  skype: "#"
+  deviantart: "#"
+  identica: "#"

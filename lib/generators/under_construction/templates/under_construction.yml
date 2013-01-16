@@ -1,0 +1,12 @@
+site:
+  name: "SITE NAME"
+  logo_url: "LOGO URL"
+site_developer:
+  name: "SITE DEVELOPER NAME"
+  logo_url: "SITE DEVELOPER LOGO"
+completed_at: "DATE OF COMPELETION"
+progress: "PERCENT"
+progress_label: "PROGRESS STATUS"
+social:
+  twitter: "TWITTER ACCOUNT"
+  facebook: "FACEBOOK ACCOUNT"
