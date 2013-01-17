@@ -7,7 +7,7 @@ module UnderConstruction
 
   # Will redirect all requests to under construction page
   def redirect_to_under_construction
-    unless request.url == under_construction_url || request.url == under_construction_index_url
+    unless request.url =~ /(under_construction|email_storage)/ 
       redirect_to under_construction_path
     end
   end
