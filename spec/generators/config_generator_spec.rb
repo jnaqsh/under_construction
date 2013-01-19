@@ -20,7 +20,8 @@ describe UnderConstruction::Generators::ConfigGenerator do
   it "configs the application controller" do
     run_generator
     f = file('app/controllers/application_controller.rb')
-    f.should contain(/#{UnderConstruction::Generators::CONFIG_TXT}/)
+    f.should contain(/redirect_to under_construction_path\n/)
+    # f.should contain(Regexp.escape(UnderConstruction::Generators::CONFIG_TXT))
   end
 
   describe 'when application_controller.rb does not exist' do
