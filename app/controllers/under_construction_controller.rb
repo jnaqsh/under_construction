@@ -12,7 +12,7 @@ class UnderConstructionController < ApplicationController
 
 private
   def assign_config_options_to_view
-    configs = UnderConstruction::LoadConfig.new.configs
+    configs = UnderConstruction.config_file
     configs.each_pair do |key, value|
       instance_variable_set '@'+key, value
     end

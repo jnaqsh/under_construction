@@ -9,7 +9,7 @@ module UnderConstruction
     end
 
     def schedule
-      @end_time ||= UnderConstruction.config.end_date
+      @end_time ||= UnderConstruction.config.launch_time
       @job = @scheduler.at Chronic.parse(@end_time) do
         invoke_clear_generator()
       end
@@ -27,8 +27,8 @@ module UnderConstruction
 
   private
     def invoke_clear_generator
-      # `rails generate under_construction:clear`
       Rails::Generators.invoke('under_construction:clear')
+      # If there's a scheduled job, remove it
       stop_schedule if jobs.size > 0
     end
   end
