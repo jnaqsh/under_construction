@@ -7,6 +7,4 @@ require "under_construction/config"
 
 module UnderConstruction
   autoload :Schedule,       "under_construction/schedule"
-  autoload :LoadConfig,     "under_construction/load_config"
-  autoload :Engine,         "under_construction/engine"
 end
