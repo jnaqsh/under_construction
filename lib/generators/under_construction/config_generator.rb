@@ -11,6 +11,11 @@ module UnderConstruction
           raise 'Couldn\'t find application_controller file'
         end
       end
+
+      def uncomment_routes
+        uncomment_lines File.expand_path('../../../../config/routes.rb', __FILE__),
+                        /match "\/\*other"/
+      end
     end
   end
 end

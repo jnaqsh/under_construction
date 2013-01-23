@@ -12,6 +12,11 @@ module UnderConstruction
             ''
         end
       end
+
+      def comment_routes_file
+        comment_lines File.expand_path('../../../../config/routes.rb', __FILE__),
+                        /match "\/\*other"/
+      end
     end
   end
 end

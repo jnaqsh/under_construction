@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   get 'under_construction/index'
   match "under_construction" => "UnderConstruction#index"
+  # match "/*other" => redirect("/under_construction")
 end

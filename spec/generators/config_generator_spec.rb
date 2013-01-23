@@ -24,6 +24,12 @@ describe UnderConstruction::Generators::ConfigGenerator do
     # f.should contain(Regexp.escape(UnderConstruction::Generators::CONFIG_TXT))
   end
 
+  it "configs the gems routes file" do
+    run_generator
+    f = File.expand_path("../../../config/routes.rb", __FILE__)
+    f.should contain(/match "\/\*other"/)
+  end
+
   describe 'when application_controller.rb does not exist' do
     let(:real_application_controller_path ) { Rails.root + 'app/controllers/application_controller.rb'}
     let(:stash_application_controller_path) { 'stash_application_controller.rb'}

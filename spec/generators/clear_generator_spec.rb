@@ -22,4 +22,9 @@ describe UnderConstruction::Generators::ClearGenerator do
     f = file('app/controllers/application_controller.rb')
     f.should_not contain(/before_filter :redirect_to_under_construction/)
   end
+  it "comments configs from rotes file" do
+    run_generator
+    f = File.expand_path("../../../config/routes.rb", __FILE__)
+    f.should contain(/# match "\/\*other"/)
+  end
 end
