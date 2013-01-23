@@ -12,7 +12,7 @@
 
   <script type="text/javascript">
   $(function () {
-  var austDay = new Date("<%= Chronic.parse(@launch_time).strftime("%B %d, %Y %T") %>");
+  var austDay = new Date("<%= Chronic.parse(@launch_time).to_s(:rfc822) %>");
     $('#defaultCountdown').countdown({until: austDay, layout: '{dn} {dl}, {hn} {hl}, {mn} {ml}, and {sn} {sl}'});
     $('#year').text(austDay.getFullYear());
     });
