@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe EmailStorageController do
+describe UnderConstructionEmailStorageController do
   describe "POST 'create'" do
     it "creates email successfully" do
       pending "Don't know why fails. While are feature test work, who cares?"

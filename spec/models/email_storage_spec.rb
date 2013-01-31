@@ -1,16 +1,18 @@
 require 'spec_helper'
 
-describe EmailStorage do
+describe UnderConstructionEmailStorage do
+  let(:mail) { UnderConstructionEmailStorage }
   it 'validates presence of email' do
-    expect(FactoryGirl.build :email_storage).to be_valid
+    expect(mail.new email: "test@example.com").to be_valid
   end
 
   it 'validates format of email' do
-    expect(FactoryGirl.build :email_storage, email: "test").to be_invalid
+    expect(mail.new email: "test").to be_invalid
   end
 
   it 'validates uniquness of email' do
-    FactoryGirl.create :email_storage
-    expect(FactoryGirl.build :email_storage).to be_invalid
+    mail1 = mail.new email: "test@example.com"
+    mail1.save_to_file
+    expect(mail.new email: "test@example.com").to be_invalid
   end
 end

@@ -3,7 +3,7 @@ class UnderConstructionController < ApplicationController
   
   def index
     assign_config_options_to_view
-    @email = EmailStorage.new
+    @email = UnderConstructionEmailStorage.new
     
     respond_to do |format|
       format.html { render template: "under_construction/#{@theme}/index" }

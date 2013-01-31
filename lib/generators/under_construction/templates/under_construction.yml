@@ -2,10 +2,11 @@ theme: 'site-under-construction'
 launch_time: "May 27 7pm"
 progress: "60" # Percent
 progress_label: "Progress"
+website_address: "http://example.com"
 info:
   site_title: "My Website"
   logo_url: "logo.png"
-  email: "support@mywebsite.com"
+  email: "support@example.com"
   phone: "phone : 555-123456"
   heading: "This website is under construction"
   counter_heading: "Estimated Time Remaining Before Launch:"
@@ -31,3 +32,6 @@ socials:
   skype: "#"
   deviantart: "#"
   identica: "#"
+notify_mail:
+  sender_email_address: "noreply@example.com"
+  email_subject: "My Website just launched!"

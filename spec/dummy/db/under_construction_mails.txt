@@ -1,0 +1,3 @@
+test@test.com
+test@example.com
+aaa@test.com

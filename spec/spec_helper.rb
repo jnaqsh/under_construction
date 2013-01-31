@@ -4,7 +4,7 @@ require File.expand_path("../dummy/config/environment", __FILE__)
 require 'rspec/rails'
 require 'ammeter/init'
 require 'rspec/autorun'
-require 'factory_girl_rails'
+# require 'factory_girl_rails'
 require 'capybara/rspec'
 
 # Requires supporting ruby files with custom matchers and macros, etc,

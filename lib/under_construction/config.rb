@@ -29,6 +29,8 @@ module UnderConstruction
     config_accessor :site_developer
     config_accessor :socials_title
     config_accessor :socials
+    config_accessor :notify_mail
+    config_accessor :website_address
   end
 
   configure do |configuration|
