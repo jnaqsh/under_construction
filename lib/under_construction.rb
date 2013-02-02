@@ -3,8 +3,16 @@ require 'rufus-scheduler'
 require 'chronic'
 
 require "under_construction/engine"
-require "under_construction/config"
 
 module UnderConstruction
-  autoload :Schedule,       "under_construction/schedule"
+
+  class Railtie < ::Rails::Railtie
+    initializer "set_autoload_paths" do |app|
+      if app.config.autoload_paths
+        require "under_construction/config"
+        require "under_construction/schedule"
+      end
+    end
+  end
+
 end

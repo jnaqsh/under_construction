@@ -11,11 +11,7 @@ module UnderConstruction
   end
 
   def self.config_file
-    if Rails.root
-      YAML.load_file(File.join(Rails.root, 'config','under_construction.yml'))
-    else
-      YAML.load_file(File.expand_path('../../generators/under_construction/templates/under_construction.yml',__FILE__))
-    end
+    YAML.load_file(File.join(Rails.root, 'config','under_construction.yml'))
   end
 
   class Configuration
