@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'generators/under_construction/clear_generator'
 
 def copy_files
-  application_controller = File.expand_path("../../template/clear/application_controller.rb", __FILE__)
+  application_controller = File.expand_path("../templates/clear/application_controller.rb", __FILE__)
   destination = File.join(destination_root, 'app', 'controllers')
 
   FileUtils.mkdir_p(destination)
@@ -22,9 +22,16 @@ describe UnderConstruction::Generators::ClearGenerator do
     f = file('app/controllers/application_controller.rb')
     f.should_not contain(/before_filter :redirect_to_under_construction/)
   end
-  it "comments configs from rotes file" do
+
+  it "comments configs from routes file" do
     run_generator
     f = File.expand_path("../../../config/routes.rb", __FILE__)
     f.should contain(/# match "\/\*other"/)
+  end
+
+  it "remove scheduler file" do
+    run_generator
+    f = 'config/under_construction_scheduler.rb'
+    File.exist?(f).should be_false
   end
 end

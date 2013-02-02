@@ -17,6 +17,12 @@ module UnderConstruction
         comment_lines File.expand_path('../../../../config/routes.rb', __FILE__),
                         /match "\/\*other"/
       end
+
+      def remove_scheduler_file
+        if File.exist?('config/under_construction_scheduler.rb')
+          remove_file 'config/under_construction_scheduler.rb'
+        end
+      end
     end
   end
 end
