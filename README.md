@@ -20,7 +20,7 @@ In Rails 3, simply add the GEM to your gemfile:
      gem 'under_construction'
 
 Then run the `config` generator. This will edit your `application_controller` to
-redirect all the URLs to under construction page(make a config file before, see `config` section)
+redirect all the URLs to under construction page (make a config file before, see `config` section)
 
     rails g under_construction:config
 
@@ -78,7 +78,7 @@ on the theme using, not all options may be used:
 Schedule
 ========
 
-run the `schedule` generator:
+This will schedule to run `clear` generator in the time mentioned in your yaml config file. Run the `schedule` generator:
 
     rails g under_construction:schedule
 
@@ -87,9 +87,7 @@ you need to restart the rails server for scheduler to be able to initialize.
 Send notifications
 ==================
 
-Email of those who have submited their email in the under construction page will
-be saved in a simple text file under `db/under_construction_mails.txt`. There's a
-rake task that automatically reads the file and sends notification mails:
+Email of those who have submited their email in the under construction page will be saved in a simple text file under `db/under_construction_mails.txt`. There's a rake task that automatically reads the file and sends notification mails:
 
     under_construction:send_mails
 
