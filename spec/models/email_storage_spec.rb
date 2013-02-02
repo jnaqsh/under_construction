@@ -2,6 +2,9 @@ require 'spec_helper'
 
 describe UnderConstructionEmailStorage do
   let(:mail) { UnderConstructionEmailStorage }
+  before do
+    mail.remove_file
+  end
   it 'validates presence of email' do
     expect(mail.new email: "test@example.com").to be_valid
   end

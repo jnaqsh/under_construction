@@ -4,6 +4,7 @@ class UnderConstructionEmailStorage
   extend ActiveModel::Naming
 
   attr_accessor :email
+  FILE_PATH = Rails.root + "db/under_construction_mails.txt"
 
     class UniquenessValidator < ActiveModel::EachValidator
       def validate_each(record, attribute, value)
@@ -34,14 +35,14 @@ class UnderConstructionEmailStorage
 
   # save submitted mail to a text file
   def save_to_file
-    File.open(Rails.root + "db/under_construction_mails.txt", "a") do |f|
+    File.open(FILE_PATH, "a") do |f|
       f.puts email
     end
   end
 
   # return emails in a array
   def self.emails
-    File.open(Rails.root + "db/under_construction_mails.txt", "r") do |f|
+    File.open(FILE_PATH, "r") do |f|
       f.readlines
     end
   rescue Errno::ENOENT
@@ -50,5 +51,11 @@ class UnderConstructionEmailStorage
 
   def self.no_emails?
     emails.empty?
+  end
+
+  def self.remove_file
+    if File.exist? FILE_PATH
+      FileUtils.rm FILE_PATH
+    end
   end
 end
