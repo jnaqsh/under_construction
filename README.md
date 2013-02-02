@@ -89,7 +89,7 @@ Send notifications
 
 Email of those who have submited their email in the under construction page will be saved in a simple text file under `db/under_construction_mails.txt`. There's a rake task that automatically reads the file and sends notification mails:
 
-    under_construction:send_mails
+    rake under_construction:send_mails
 
 Contribute
 ==========
