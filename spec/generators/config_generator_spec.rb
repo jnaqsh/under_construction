@@ -43,4 +43,10 @@ describe UnderConstruction::Generators::ConfigGenerator do
       expect { run_generator }.to raise_error "Couldn't find application_controller file"
     end
   end
+
+  it "copies the config file" do
+    run_generator
+    f = Rails.root + 'config/under_construction.yml'
+    (File.exist? f).should be_true
+  end
 end
