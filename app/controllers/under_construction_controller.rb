@@ -1,5 +1,5 @@
 class UnderConstructionController < ApplicationController
-  layout nil
+  layout false
   
   def index
     assign_config_options_to_view
