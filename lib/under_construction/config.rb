@@ -11,7 +11,12 @@ module UnderConstruction
   end
 
   def self.config_file
-    YAML.load_file(File.join(Rails.root, 'config','under_construction.yml'))
+    config_path = File.join(Rails.root, 'config','under_construction.yml')
+    if config_path
+      YAML.load_file(config_path)
+    else
+      false
+    end
   end
 
   class Configuration
@@ -29,9 +34,11 @@ module UnderConstruction
     config_accessor :website_address
   end
 
-  configure do |configuration|
-    config_file.each_pair do |key, value|
-      configuration.config[key.to_sym] = value
+  if config_file
+    configure do |configuration|
+      config_file.each_pair do |key, value|
+        configuration.config[key.to_sym] = value
+      end
     end
   end
 
