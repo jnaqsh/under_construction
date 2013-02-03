@@ -14,8 +14,14 @@ module UnderConstruction
       end
 
       def comment_routes_file
-        comment_lines File.expand_path('../../../../config/routes.rb', __FILE__),
-                        /match "\/\*other"/
+        file = File.expand_path('../../../../config/routes.rb', __FILE__)
+        comment_lines file, /match "\/\*other"/
+        comment_lines file, /resources 'under_construction', only: :index/
+      end
+
+      def uncomment_routes_file
+        file = File.expand_path('../../../../config/routes.rb', __FILE__)
+        uncomment_lines file, /# match "under_construction", :to => redirect/
       end
 
       def remove_scheduler_file

@@ -27,6 +27,7 @@ describe UnderConstruction::Generators::ClearGenerator do
     run_generator
     f = File.expand_path("../../../config/routes.rb", __FILE__)
     f.should contain(/# match "\/\*other"/)
+    f.should contain(/# resources 'under_construction'/)
   end
 
   it "remove scheduler file" do

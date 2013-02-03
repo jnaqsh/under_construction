@@ -9,12 +9,20 @@ def copy_files
   FileUtils.cp application_controller, destination
 end
 
+def remove_view_directory
+  FileUtils.rm_rf Rails.root + 'app/views/under_construction'
+end
+
 describe UnderConstruction::Generators::ConfigGenerator do
   destination File.expand_path("../../../tmp", __FILE__)
 
   before do
     prepare_destination
     copy_files
+  end
+
+  after :all do
+    remove_view_directory
   end
 
   it "configs the application controller" do
@@ -55,5 +63,11 @@ describe UnderConstruction::Generators::ConfigGenerator do
     run_generator
     f = File.expand_path("../../../config/routes.rb", __FILE__)
     f.should contain(/# match "under_construction", :to => redirect/)
+  end
+
+  it "should copy the index file to user app" do
+    run_generator
+    f = Rails.root + 'app/views/under_construction/site-under-construction/index.html.erb'
+    (File.exist? f).should be_true
   end
 end

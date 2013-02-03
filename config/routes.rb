@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   resources 'under_construction', only: :index
   # match "under_construction", :to => redirect('/')
-  # match "/*other" => redirect("/under_construction")
+  match "/*other" => redirect("/under_construction")
 end

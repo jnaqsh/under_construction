@@ -28,6 +28,12 @@ module UnderConstruction
         file = File.expand_path('../../../../config/routes.rb', __FILE__)
         comment_lines file, /match "under_construction", :to => redirect/
       end
+
+      def copy_index_file_to_app
+        file = Rails.root + 'app/views/under_construction/site-under-construction'
+        empty_directory file
+        copy_file 'index.html.erb', file + 'index.html.erb'
+      end
     end
   end
 end
