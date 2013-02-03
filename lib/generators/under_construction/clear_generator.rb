@@ -21,7 +21,7 @@ module UnderConstruction
 
       def uncomment_routes_file
         file = File.expand_path('../../../../config/routes.rb', __FILE__)
-        uncomment_lines file, /# match "under_construction", :to => redirect/
+        uncomment_lines file, /match "under_construction", :to => redirect\('\/'\)/
       end
 
       def remove_scheduler_file

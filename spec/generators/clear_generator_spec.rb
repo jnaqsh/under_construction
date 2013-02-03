@@ -35,4 +35,10 @@ describe UnderConstruction::Generators::ClearGenerator do
     f = 'config/under_construction_scheduler.rb'
     File.exist?(f).should be_false
   end
+
+  it "uncomments route file" do
+    run_generator
+    f = File.expand_path("../../../config/routes.rb", __FILE__)
+    f.should contain(/match "under_construction", :to => redirect/)
+  end
 end
