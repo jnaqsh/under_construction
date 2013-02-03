@@ -5,7 +5,7 @@ progress_label: "Progress"
 website_address: "http://example.com"
 info:
   site_title: "My Website"
-  logo_url: "logo.png"
+  logo_url: "/assets/under_construction/site-under-construction/logo.png"
   email: "support@example.com"
   phone: "phone : 555-123456"
   heading: "This website is under construction"

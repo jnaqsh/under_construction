@@ -5,6 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
   <title><%= @info['site_title'] %></title>
+  <%= javascript_include_tag "application" %>
   <%= stylesheet_link_tag "under_construction/#{@theme}/style.css", :media => "all" %>
   <%= javascript_include_tag "under_construction/#{@theme}/jquery.countdown.js" %>
   <%= javascript_include_tag "under_construction/#{@theme}/jcarousellite1.0.1_min.js" %>
@@ -40,7 +41,9 @@
     <%= view_flash_messages unless view_flash_messages.blank?  %>
     <div id="header">
       <div id="logo">
-        <a href="index.html"><%= image_tag "under_construction/#{@theme}/logo.png" %></a>
+        <a href="index.html">
+          <img src="<%= @info['logo_url'] %>"></img>
+        </a>
       </div><!--end logo-->
 
       <div id="contact_details">
