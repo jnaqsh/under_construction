@@ -14,17 +14,19 @@ module UnderConstruction
         end
       end
 
-      def uncomment_underconstruction_routes
-        uncomment_lines File.expand_path('../../../../config/routes.rb', __FILE__),
-                        /match "\/\*other"/
-      end
-
-      def comment_redirect_route
-        
-      end
-
       def copy_config_file
         copy_file 'under_construction.yml', Rails.root + 'config/under_construction.yml'
+      end
+
+      def uncomment_all_routes_to_redirect_to_under_construction
+        file = File.expand_path('../../../../config/routes.rb', __FILE__)
+        uncomment_lines file, /match "\/\*other"/
+        uncomment_lines file, /resources 'under_construction', only: :index/
+      end
+
+      def comment_redirection_of_under_construction_to_root
+        file = File.expand_path('../../../../config/routes.rb', __FILE__)
+        comment_lines file, /match "under_construction", :to => redirect/
       end
     end
   end

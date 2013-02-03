@@ -28,6 +28,7 @@ describe UnderConstruction::Generators::ConfigGenerator do
     run_generator
     f = File.expand_path("../../../config/routes.rb", __FILE__)
     f.should contain(/match "\/\*other"/)
+    f.should contain(/resources 'under_construction', only: :index/)
   end
 
   describe 'when application_controller.rb does not exist' do
@@ -48,5 +49,11 @@ describe UnderConstruction::Generators::ConfigGenerator do
     run_generator
     f = Rails.root + 'config/under_construction.yml'
     (File.exist? f).should be_true
+  end
+
+  it "should comment redirect lines in routes file" do
+    run_generator
+    f = File.expand_path("../../../config/routes.rb", __FILE__)
+    f.should contain(/# match "under_construction", :to => redirect/)
   end
 end

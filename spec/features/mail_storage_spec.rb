@@ -13,10 +13,10 @@ describe "Email Storage Feature Test" do
   end
 
   it "sumbits email successfully" do
-    visit under_construction_path
+    visit under_construction_index_path
     fill_in 'email', with: 'test@test.com'
     click_button :submit
-    current_path.should eq(under_construction_path)
+    current_path.should eq(under_construction_index_path)
     page.should have_content('Email added successfully')
   end
 end
