@@ -13,7 +13,7 @@ def remove_view_directory
   FileUtils.rm_rf Rails.root + 'app/views/under_construction'
 end
 
-describe UnderConstruction::Generators::ConfigGenerator, focus:true do
+describe UnderConstruction::Generators::ConfigGenerator do
   destination File.expand_path("../../../tmp", __FILE__)
 
   before do

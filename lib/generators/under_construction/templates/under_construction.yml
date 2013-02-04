@@ -36,3 +36,6 @@ socials:
 notify_mail:
   sender_email_address: "noreply@example.com"
   email_subject: "My Website just launched!"
+  email_content: |
+                  Hi! Our site, "Example", has just launched!
+                  Click the flowing link to view the website: http://example.com
