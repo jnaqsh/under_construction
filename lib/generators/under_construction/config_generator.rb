@@ -1,4 +1,4 @@
-require_relative 'generators'
+require_relative 'constants'
 
 module UnderConstruction
   module Generators
