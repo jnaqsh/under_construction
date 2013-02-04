@@ -19,26 +19,29 @@ describe UnderConstruction::Generators::ClearGenerator do
 
   it "clears configs from application_controller" do
     run_generator
-    f = file('app/controllers/application_controller.rb')
+    f = file(Rails.root + 'app/controllers/application_controller.rb')
     f.should_not contain(/before_filter :redirect_to_under_construction/)
   end
 
-  it "comments configs from routes file" do
+  it "clear route file" do
     run_generator
-    f = File.expand_path("../../../config/routes.rb", __FILE__)
-    f.should contain(/# match "\/\*other"/)
-    f.should contain(/# resources 'under_construction'/)
+    f = Rails.root + 'config/routes.rb'
+    f.should_not contain(/match "\/\*other"/)
+    f.should_not contain(/resources 'under_construction'/)
+    f.should contain('match "under_construction", :to => redirect(\'/\')')
+  end
+
+  it "removes view files" do
+    f = Rails.root + 'app/views/under_construction'
+    FileUtils.mkdir_p f
+    run_generator
+    file(f).should_not exist
   end
 
   it "remove scheduler file" do
+    f = Rails.root + 'config/under_construction_scheduler.rb'
+    FileUtils.touch f
     run_generator
-    f = 'config/under_construction_scheduler.rb'
-    File.exist?(f).should be_false
-  end
-
-  it "uncomments route file" do
-    run_generator
-    f = File.expand_path("../../../config/routes.rb", __FILE__)
-    f.should contain(/match "under_construction", :to => redirect/)
+    file(f).should_not exist
   end
 end

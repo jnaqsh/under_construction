@@ -3,6 +3,8 @@ Dummy::Application.routes.draw do
   resources 'under_construction', only: :index
   match "/*other" => redirect("/under_construction")
 
+  # match "under_construction", :to => redirect('/')
+
   resources :posts
 
   # The priority is based upon order of creation:
