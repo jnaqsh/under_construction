@@ -30,6 +30,8 @@ module UnderConstruction
       Rails::Generators.invoke('under_construction:clear')
       # If there's a scheduled job, remove it
       stop_schedule if jobs.size > 0
+      # To make passenger to restart the application
+      FileUtils.touch Rails.root + 'tmp/restart.txt'
     end
   end
 end
