@@ -12,7 +12,7 @@ module UnderConstruction
 
   def self.config_file
     config_path = File.join(Rails.root, 'config','under_construction.yml')
-    if config_path
+    if File.exist? File.join(Rails.root, 'config','under_construction.yml')
       YAML.load_file(config_path)
     else
       false
