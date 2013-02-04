@@ -1,8 +1,9 @@
 theme: 'site-under-construction'
-launch_time: "May 27 7pm"
+launch_time: "10 seconds from now"
 progress: "60" # Percent
 progress_label: "Progress"
 website_address: "http://example.com"
+host_name: "localhost"
 info:
   site_title: "My Website"
   logo_url: "/assets/under_construction/site-under-construction/logo.png"
