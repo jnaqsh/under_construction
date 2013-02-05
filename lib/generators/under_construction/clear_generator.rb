@@ -16,6 +16,7 @@ module UnderConstruction
       def clear_routes_file
         file_path = 'config/routes.rb'
         gsub_file file_path, /#{Regexp.escape(ROUTES_CONFIG_TXT)}/, ''
+        gsub_file file_path, /#{Regexp.escape(ROUTES_REDIRECT_TO_TXT)}/, ''
         insert_into_file file_path, ROUTES_CLEAR_TXT, after: /Application.routes.draw do/
       end
 
