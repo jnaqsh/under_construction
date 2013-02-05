@@ -3,7 +3,7 @@ launch_time: "24 Feb 2050"
 progress: "60" # Percent
 progress_label: "Progress"
 website_address: "http://example.com"
-host_name: "localhost"
+host_name: "localhost:3000"
 info:
   site_title: "My Website"
   logo_url: "/assets/under_construction/site-under-construction/logo.png"
