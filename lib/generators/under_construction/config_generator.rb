@@ -21,7 +21,7 @@ module UnderConstruction
       def config_route_file
         file_path = 'config/routes.rb'
         gsub_file file_path, /match "under_construction", :to => redirect\('\/'\)/, ''
-        insert_into_file file_path, ROUTES_CONFIG_TXT, after: /Application.routes.draw do/
+        gsub_file file_path, /(Application.routes.draw do)(.*)(end)/m, '\1\2'+"#{ROUTES_CONFIG_TXT}" + '\3'
       end
 
       def copy_index_file_to_app
