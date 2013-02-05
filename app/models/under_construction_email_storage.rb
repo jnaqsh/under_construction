@@ -12,7 +12,7 @@ class UnderConstructionEmailStorage
         if File.exist? emails_path
           File.open(emails_path, "r") do |f|
             if f.readlines.include? value + "\n"
-              record.errors[attribute] << (options[:message] || "already submitted")
+              record.errors[attribute] << I18n.t('activemodel.errors.models.under_construction_email_storage.attributes.email.uniqueness', default: "Already submitted")
             end
           end
         end
@@ -20,8 +20,8 @@ class UnderConstructionEmailStorage
     end
 
   validates :email, presence: true, uniqueness: true,
-            format: { with: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, 
-                      message: "doesn't looks like correct" }
+            format: { with: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i,
+                      message: I18n.t('activemodel.errors.models.under_construction_email_storage.attributes.email.format', default: "doesn't looks like correct") }
 
   def initialize(attributes = {})
     attributes.each do |name, value|

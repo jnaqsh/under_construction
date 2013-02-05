@@ -1,6 +1,6 @@
 <%= form_for @email, url: under_construction_email_storage_index_path, html: { id: 'subscribeform' } do |f| %>
   <div id='email_input'>
     <%= f.text_field :email, id: 'email', placeholder: @info['email_field_value'], size: 30 %>
-    <%= f.submit 'SUBMIT', id: 'submit' %>
+    <%= f.submit t('.submit', default: "SUBMIT"), id: 'submit' %>
   </div>
 <% end %>
