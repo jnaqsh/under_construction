@@ -1,10 +1,6 @@
 Dummy::Application.routes.draw do
   match "under_construction", :to => redirect('/')
 
-  
-
-  
-
   resources :posts
 
   # The priority is based upon order of creation:

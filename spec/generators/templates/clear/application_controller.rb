@@ -5,8 +5,10 @@ class ApplicationController < ActionController::Base
 
   # Will redirect all requests to under construction page
   def redirect_to_under_construction
-    unless request.url == under_construction_url
-      redirect_to under_construction_path
+    if request.host == UnderConstruction.config.host_name && Rails.env.production?
+      unless request.url =~ /(under_construction|email_storage)/
+        redirect_to under_construction_index_path
+      end
     end
   end
 

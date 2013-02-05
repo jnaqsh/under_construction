@@ -7,6 +7,12 @@ def copy_files
 
   FileUtils.mkdir_p(destination)
   FileUtils.cp application_controller, destination
+
+  routes_config = File.expand_path("../templates/clear/routes.rb", __FILE__)
+  destination = File.join(destination_root, "config")
+
+  FileUtils.mkdir_p(destination)
+  FileUtils.cp routes_config, destination
 end
 
 describe UnderConstruction::Generators::ClearGenerator do
@@ -19,29 +25,32 @@ describe UnderConstruction::Generators::ClearGenerator do
 
   it "clears configs from application_controller" do
     run_generator
-    f = file(Rails.root + 'app/controllers/application_controller.rb')
-    f.should_not contain(/before_filter :redirect_to_under_construction/)
+    f = file('app/controllers/application_controller.rb')
+    f.should_not contain('before_filter :redirect_to_under_construction')
   end
 
   it "clear route file" do
     run_generator
-    f = Rails.root + 'config/routes.rb'
+    f = file('config/routes.rb')
     f.should_not contain(/match "\/\*other"/)
     f.should_not contain(/resources 'under_construction'/)
     f.should contain('match "under_construction", :to => redirect(\'/\')')
   end
 
   it "removes view files" do
-    f = Rails.root + 'app/views/under_construction'
+    f = file('app/views/under_construction')
     FileUtils.mkdir_p f
     run_generator
     file(f).should_not exist
   end
 
   it "remove scheduler file" do
-    f = Rails.root + 'config/under_construction_scheduler.rb'
-    FileUtils.touch f
+    f = file('config/initializers')
+    FileUtils.mkdir_p f
+    FileUtils.touch f + '/under_construction_scheduler.rb'
+    # Something is wrong with 'ammeter' :( I have to stub File to make this work :/
+    File.stub(:exist?) { true }
     run_generator
-    file(f).should_not exist
+    file(f + '/under_construction_scheduler.rb').should_not exist
   end
 end

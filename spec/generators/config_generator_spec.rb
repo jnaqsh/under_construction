@@ -4,13 +4,15 @@ require 'generators/under_construction/config_generator'
 def copy_files
   application_controller = File.expand_path("../templates/config/application_controller.rb", __FILE__)
   destination = File.join(destination_root, "app/controllers")
-  
+
   FileUtils.mkdir_p(destination)
   FileUtils.cp application_controller, destination
-end
 
-def remove_view_directory
-  FileUtils.rm_rf Rails.root + 'app/views/under_construction'
+  routes_config = File.expand_path("../templates/config/routes.rb", __FILE__)
+  destination = File.join(destination_root, "config")
+
+  FileUtils.mkdir_p(destination)
+  FileUtils.cp routes_config, destination
 end
 
 describe UnderConstruction::Generators::ConfigGenerator do
@@ -19,10 +21,6 @@ describe UnderConstruction::Generators::ConfigGenerator do
   before do
     prepare_destination
     copy_files
-  end
-
-  after :all do
-    remove_view_directory
   end
 
   describe 'when application_controller.rb does not exist' do
@@ -45,9 +43,9 @@ describe UnderConstruction::Generators::ConfigGenerator do
     f.should contain(/redirect_to_under_construction\n/)
   end
 
-  it "configs the gems routes file" do
+  it "configs the routes file" do
     run_generator
-    f = Rails.root + "config/routes.rb"
+    f = file("config/routes.rb")
     f.should contain(/match "\/\*other"/)
     f.should contain(/resources 'under_construction', only: :index/)
     f.should_not contain('match "under_construction", :to => redirect(\'/\')')
@@ -55,19 +53,19 @@ describe UnderConstruction::Generators::ConfigGenerator do
 
   it "copies the config file" do
     run_generator
-    f = Rails.root + 'config/under_construction.yml'
+    f = file('config/under_construction.yml')
     file(f).should exist
   end
 
   it "should copy the index file to user app" do
     run_generator
-    f = Rails.root + 'app/views/under_construction/site-under-construction/index.html.erb'
+    f = file('app/views/under_construction/site-under-construction/index.html.erb')
     file(f).should exist
   end
 
   it "copies the scheduler initializer file" do
     run_generator
-    f = Rails.root + 'config/initializers/under_construction_scheduler.rb'
+    f = file('config/initializers/under_construction_scheduler.rb')
     file(f).should exist
   end
 end

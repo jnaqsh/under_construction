@@ -15,23 +15,23 @@ module UnderConstruction
       end
 
       def copy_config_file
-        copy_file 'under_construction.yml', Rails.root + 'config/under_construction.yml'
+        copy_file 'under_construction.yml', 'config/under_construction.yml'
       end
 
       def config_route_file
-        file_path = Rails.root + 'config/routes.rb'
+        file_path = 'config/routes.rb'
         gsub_file file_path, /match "under_construction", :to => redirect\('\/'\)/, ''
         insert_into_file file_path, ROUTES_CONFIG_TXT, after: /Application.routes.draw do/
       end
 
       def copy_index_file_to_app
-        file = Rails.root + 'app/views/under_construction/site-under-construction'
+        file = 'app/views/under_construction/site-under-construction'
         empty_directory file
-        copy_file 'index.html.erb', file + 'index.html.erb'
+        copy_file 'index.html.erb', file + '/index.html.erb'
       end
 
       def copy_scheduler_initializer
-        destination_path = Rails.root + 'config/initializers/under_construction_scheduler.rb'
+        destination_path = 'config/initializers/under_construction_scheduler.rb'
         copy_file 'under_construction_scheduler.rb', destination_path
       end
     end
