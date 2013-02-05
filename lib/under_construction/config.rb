@@ -24,6 +24,7 @@ module UnderConstruction
 
     config_accessor :theme
     config_accessor :launch_time
+    config_accessor :host_name
     config_accessor :progress
     config_accessor :progress_label
     config_accessor :info
