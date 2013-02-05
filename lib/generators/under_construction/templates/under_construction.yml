@@ -1,5 +1,5 @@
 theme: 'site-under-construction'
-launch_time: "24 Feb 2050"
+launch_time: "24 Feb 2050 7:00pm"
 progress: "60" # Percent
 progress_label: "Progress"
 website_address: "http://example.com"
@@ -13,7 +13,7 @@ info:
   counter_heading: "Estimated Time Remaining Before Launch:"
   about_title: "Some words about us"
   about_content: |
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                   Phasellus hendrerit. Pellentesque aliquet nibh nec urna. I
                   n nisi neque, aliquet vel, dapibus id, mattis vel, nisi.
   inform_by_email: "Type your email id to get the updates!"
@@ -23,7 +23,7 @@ site_developer:
   name: "Great Developer"
 socials_title: "You may find us below:"
 socials:
-  twitter: "#" #Full URL: twitter.com/great_developer
+  twitter: "#" #Full URL: http://twitter.com/great_developer
   facebook: "#"
   yahoo: "#"
   # stumbleupon: "#"
@@ -34,7 +34,7 @@ socials:
   deviantart: "#"
   identica: "#"
 notify_mail:
-  sender_email_address: "noreply@example.com"
+  sender_email_address: "do_not_reply@example.com"
   email_subject: "My Website just launched!"
   email_content: |
                   Hi! Our site, "Example", has just launched!
