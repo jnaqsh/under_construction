@@ -50,6 +50,7 @@ describe UnderConstruction::Generators::ConfigGenerator do
     f = Rails.root + "config/routes.rb"
     f.should contain(/match "\/\*other"/)
     f.should contain(/resources 'under_construction', only: :index/)
+    f.should_not contain('match "under_construction", :to => redirect(\'/\')')
   end
 
   it "copies the config file" do

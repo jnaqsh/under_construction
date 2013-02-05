@@ -20,7 +20,7 @@ module UnderConstruction
 
       def config_route_file
         file_path = Rails.root + 'config/routes.rb'
-        comment_lines file_path, /match "under_construction", :to => redirect/
+        gsub_file file_path, /match "under_construction", :to => redirect\('\/'\)/, ''
         insert_into_file file_path, ROUTES_CONFIG_TXT, after: /Application.routes.draw do/
       end
 
