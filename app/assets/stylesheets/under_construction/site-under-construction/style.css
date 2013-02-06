@@ -72,6 +72,7 @@ body {    background: #aaaaaa url(bg.jpg) repeat scroll 0 0 }
 
 /* === Flashes === */
 .flash {
+    text-align: center;
     position: relative;
     margin: 0 auto;
     top: 20px;
