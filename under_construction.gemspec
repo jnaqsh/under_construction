@@ -10,10 +10,11 @@ Gem::Specification.new do |s|
   s.authors     = ["Arash Mousavi", "Hamed Ramezanian"]
   s.email       = ["mousavi.arash@gmail.com", "h.ramezanian@jnaqsh.com"]
   s.homepage    = "https://github.com/jnaqsh/under_construction"
-  s.summary     = "A rails GEM to automaticaly moderate underconstruction
+  s.summary     = "A rails GEM to automaticaly moderate under construction
                     pages with ability to automatically schedule for launch time"
-  s.description = "A rails GEM to automaticaly moderate underconstruction
-                    pages with ability to automatically schedule for launch time"
+  s.description = "A rails GEM to automaticaly moderate under construction
+                    pages with ability to automatically schedule for launch time.
+                    Also it have two default themes and some other fancy things."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["Rakefile", "README.md"]
 
