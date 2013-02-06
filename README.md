@@ -83,6 +83,16 @@ on the theme using, not all options may be used:
 
 Note: you need to restart the rails server for scheduler to be able to initialize after configuration.
 
+Themes
+======
+There are two themes for under construction but you can design another one and send it for us
+or you can modify theme in your views/under_construction/*theme*.
+
+Currently two themes are:
+
+* site-under-construction
+* site-under-construction-fa
+
 I18n
 ====
 This gem is using standard Rails I18n translation for the error message generated and name of models.
