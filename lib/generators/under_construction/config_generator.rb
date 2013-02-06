@@ -26,9 +26,7 @@ module UnderConstruction
       end
 
       def copy_index_file_to_app
-        file = 'app/views/under_construction/site-under-construction'
-        empty_directory file
-        copy_file 'index.html.erb', file + '/index.html.erb'
+        directory 'under_construction', 'app/views/under_construction'
       end
 
       def copy_scheduler_initializer
