@@ -37,12 +37,12 @@ describe UnderConstruction::Generators::ClearGenerator do
     f.should contain('match "under_construction", :to => redirect(\'/\')')
   end
 
-  it "removes view files" do
-    f = file('app/views/under_construction')
-    FileUtils.mkdir_p f
-    run_generator
-    file(f).should_not exist
-  end
+#  it "removes view files" do
+#    f = file('app/views/under_construction')
+#    FileUtils.mkdir_p f
+#    run_generator
+#    file(f).should_not exist
+#  end
 
   it "remove scheduler file" do
     f = file('config/initializers')
