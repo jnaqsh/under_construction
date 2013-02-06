@@ -1,0 +1,326 @@
+
+/* === Font Styles === */
+
+@font-face {
+    font-family: 'IranianSans';
+    src: url('/assets/under_construction/site-under-construction-fa/IranianSans.eot');
+    src: url('/assets/under_construction/site-under-construction-fa/IranianSans.eot?#iefix') format('embedded-opentype'), url('/assets/under_construction/site-under-construction-fa/IranianSans.woff') format('woff'), url('/assets/under_construction/site-under-construction-fa/IranianSans.ttf') format('truetype'), url('/assets/under_construction/site-under-construction-fa/IranianSans.svg#IranianSans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* === General Styles === */
+
+html,
+div,
+span,
+head,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+font,
+img,
+small,
+strong,
+ol,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+}
+
+ol,
+ul {    list-style: none }
+
+blockquote,
+q {    quotes: none }
+
+body {
+    font-family: IranianSans;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    line-height: 1;
+}
+
+body {    background: #aaaaaa url(bg.jpg) repeat scroll 0 0 }
+
+.container {
+    width: 885px;
+    margin: 0 auto;
+}
+
+#main {
+    background: url(page_background.png) no-repeat scroll 0 0;
+    margin: 0 auto;
+    padding: 0;
+    height: 430px;
+}
+
+/* === Flashes === */
+.flash {
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    top: 20px;
+    width: 300px;
+    padding: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.notice {
+    background-color: #DFF0D8;
+    border: 1px solid #D6E9C6;
+    color: #468847;
+}
+
+.alert {
+    background-color: #F2DEDE;
+    border: 1px solid #EED3D7;
+    color: #B94A48;
+}
+
+/* === Header Styles === */
+
+#header {
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+#logo {
+    position: relative;
+    float: left;
+    padding-left: 42px;
+}
+
+#contact_details {
+    float: right;
+    color: #333333;
+    font-size: 13px;
+    font-style: normal;
+    line-height: 22px;
+    padding-right: 42px;
+    text-align: right;
+}
+
+#contact_details a {
+    color: #333333;
+    font-size: 13px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+
+/* === Content Styles === */
+
+#content {    padding: 10px 44px }
+
+.text {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #262626;
+}
+
+.text h2 {
+    font-size: 30px;
+    color: #e5e5e5;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+.counter {
+    background: url(counter_bg.png) no-repeat scroll center 57px;
+    width: 797px;
+    height: 150px;
+    border-top: 1px solid #4f4f4f;
+    border-bottom: 1px solid #262626;
+    text-align: center;
+    position: relative;
+}
+
+.counter h3 {
+    font-size: 14px;
+    color: #e5e5e5;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.details {
+    border-top: 1px solid #4f4f4f;
+    height: 120px;
+}
+
+#sliderwrap {
+    float: left;
+    text-align: center;
+    width: 600px;
+    overflow: hidden;
+    position: relative;
+    height: 110px;
+    margin-right: 10px;
+}
+
+#slidertext h3 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: lighter;
+    color: #e5e5e5;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+#slidertext p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    color: #CCCCCC;
+    padding: 0 25px;
+    line-height: 2em;
+}
+
+a.prev {
+    float: left;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+a.next {
+    float: right;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+#slidertext {
+    margin-top: 15px;
+    float: left;
+    width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+#slidertext li {
+    overflow: hidden;
+    position: relative;
+    width: 600px;
+    height: 100px;
+}
+
+#slidertext ul {    width: 600px }
+
+.social {
+    position: relative;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.social a {
+    width: 48px;
+    height: 48px;
+    margin-right: 20px;
+    text-indent: -9999px;
+    display: inline-block;
+    z-index: 1000;
+}
+
+#slidertext ul li a.twitter {    background: url(twitter.png) no-repeat scroll 0 0 }
+
+#slidertext ul li a.google {    background: url(google.png) no-repeat scroll 0 0 }
+
+#slidertext ul li a.yahoo {    background: url(yahoo.png) no-repeat scroll 0 0 }
+
+#slidertext ul li a.facebook {    background: url(facebook.png) no-repeat scroll 0 0 }
+
+#slidertext ul li a.stumbleupon {    background: url(stumbleupon.png) no-repeat scroll 0 0 }
+
+#slidertext ul li a.deviantart {    background: url(deviantart.png) no-repeat scroll 0 0 }
+
+#slidertext ul li a.skype {    background: url(skype.png) no-repeat scroll 0 0 }
+
+#slidertext ul li a.youtube {    background: url(youtube.png) no-repeat scroll 0 0 }
+
+#slidertext ul li a.google {    background: url(google.png) no-repeat scroll 0 0 }
+
+#slidertext ul li a.googleplus {    background: url(googleplus.png) no-repeat scroll 0 0 }
+
+#slidertext ul li a.flickr {    background: url(flickr.png) no-repeat scroll 0 0 }
+
+#slidertext ul li a.identica {    background: url(identica.png) no-repeat scroll 0 0 }
+
+#subscribeform {
+    margin-top: 20px;
+    margin-left: 135px;
+}
+
+input#email {
+    background: url(mail-bg.png) no-repeat scroll 0 0;
+    width: 217px;
+    height: 42px;
+    border: 0 none;
+    padding: 0 20px 0 0;
+    color: #868686;
+    float: left;
+    margin-right: 10px;
+    line-height: 40px;
+}
+
+input#submit {
+    background: url(button.png) no-repeat scroll 0 0;
+    width: 92px;
+    height: 40px;
+    border: 0 none;
+    cursor: pointer;
+    color: #fff;
+    float: left;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #393939;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    margin-bottom: 50px;
+}
+
+
+/* === jQuery Countdown Styles === */
+
+#defaultCountdown {
+    width: 757px;
+    height: 60px;
+}
+
+.hasCountdown {
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #E5E5E5;
+    margin-top: 45px;
+    font-size: 26px;
+    font-weight: normal;
+}
