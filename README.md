@@ -89,8 +89,8 @@ This gem is using standard Rails I18n translation for the error message generate
 
     en:
       email_storage:
-      form:
-        submit: "SUBMIT"
+        form:
+          submit: "SUBMIT"
       controllers:
         under_construction_email_storage:
           create:
