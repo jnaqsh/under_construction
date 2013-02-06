@@ -24,7 +24,7 @@ redirect all the URLs to under construction page (make a config file before, see
 
     rails g under_construction:config
 
-For removing configs you have to use `clear` generator (After launch time automatically will run):
+For removing configs you have to use `clear` generator (After launch time automatically will be run):
 
     rails g under_construction:clear
 
