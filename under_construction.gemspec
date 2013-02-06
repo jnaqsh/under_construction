@@ -7,15 +7,15 @@ require "under_construction/version"
 Gem::Specification.new do |s|
   s.name        = "under_construction"
   s.version     = UnderConstruction::VERSION
-  s.authors     = ["Arash Mousavi"]
-  s.email       = ["mousavi.arash@gmail.com"]
+  s.authors     = ["Arash Mousavi", "Hamed Ramezanian"]
+  s.email       = ["mousavi.arash@gmail.com", "h.ramezanian@jnaqsh.com"]
   s.homepage    = "https://github.com/jnaqsh/under_construction"
-  s.summary     = "A rails GEM to automaticaly moderate underconstruction 
+  s.summary     = "A rails GEM to automaticaly moderate underconstruction
                     pages with ability to automatically schedule for launch time"
-  s.description = "A rails GEM to automaticaly moderate underconstruction 
+  s.description = "A rails GEM to automaticaly moderate underconstruction
                     pages with ability to automatically schedule for launch time"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.2"
   s.add_dependency "rufus-scheduler", "~> 2.0"
