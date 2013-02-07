@@ -56,7 +56,7 @@ body {
     line-height: 1;
 }
 
-body {    background: #aaaaaa url(bg.jpg) repeat scroll 0 0 }
+body {    background: #aaaaaa url(/assets/under_construction/site-under-construction-fa/bg.jpg) repeat scroll 0 0 }
 
 .container {
     width: 885px;
@@ -64,7 +64,7 @@ body {    background: #aaaaaa url(bg.jpg) repeat scroll 0 0 }
 }
 
 #main {
-    background: url(page_background.png) no-repeat scroll 0 0;
+    background: url(/assets/under_construction/site-under-construction-fa/page_background.png) no-repeat scroll 0 0;
     margin: 0 auto;
     padding: 0;
     height: 430px;
@@ -151,7 +151,7 @@ body {    background: #aaaaaa url(bg.jpg) repeat scroll 0 0 }
 }
 
 .counter {
-    background: url(counter_bg.png) no-repeat scroll center 57px;
+    background: url(/assets/under_construction/site-under-construction-fa/counter_bg.png) no-repeat scroll center 57px;
     width: 797px;
     height: 150px;
     border-top: 1px solid #4f4f4f;
@@ -247,29 +247,29 @@ a.next {
     z-index: 1000;
 }
 
-#slidertext ul li a.twitter {    background: url(twitter.png) no-repeat scroll 0 0 }
+#slidertext ul li a.twitter {    background: url(/assets/under_construction/site-under-construction-fa/twitter.png) no-repeat scroll 0 0 }
 
-#slidertext ul li a.google {    background: url(google.png) no-repeat scroll 0 0 }
+#slidertext ul li a.google {    background: url(/assets/under_construction/site-under-construction-fa/google.png) no-repeat scroll 0 0 }
 
-#slidertext ul li a.yahoo {    background: url(yahoo.png) no-repeat scroll 0 0 }
+#slidertext ul li a.yahoo {    background: url(/assets/under_construction/site-under-construction-fa/yahoo.png) no-repeat scroll 0 0 }
 
-#slidertext ul li a.facebook {    background: url(facebook.png) no-repeat scroll 0 0 }
+#slidertext ul li a.facebook {    background: url(/assets/under_construction/site-under-construction-fa/facebook.png) no-repeat scroll 0 0 }
 
-#slidertext ul li a.stumbleupon {    background: url(stumbleupon.png) no-repeat scroll 0 0 }
+#slidertext ul li a.stumbleupon {    background: url(/assets/under_construction/site-under-construction-fa/stumbleupon.png) no-repeat scroll 0 0 }
 
-#slidertext ul li a.deviantart {    background: url(deviantart.png) no-repeat scroll 0 0 }
+#slidertext ul li a.deviantart {    background: url(/assets/under_construction/site-under-construction-fa/deviantart.png) no-repeat scroll 0 0 }
 
-#slidertext ul li a.skype {    background: url(skype.png) no-repeat scroll 0 0 }
+#slidertext ul li a.skype {    background: url(/assets/under_construction/site-under-construction-fa/skype.png) no-repeat scroll 0 0 }
 
-#slidertext ul li a.youtube {    background: url(youtube.png) no-repeat scroll 0 0 }
+#slidertext ul li a.youtube {    background: url(/assets/under_construction/site-under-construction-fa/youtube.png) no-repeat scroll 0 0 }
 
-#slidertext ul li a.google {    background: url(google.png) no-repeat scroll 0 0 }
+#slidertext ul li a.google {    background: url(/assets/under_construction/site-under-construction-fa/google.png) no-repeat scroll 0 0 }
 
-#slidertext ul li a.googleplus {    background: url(googleplus.png) no-repeat scroll 0 0 }
+#slidertext ul li a.googleplus {    background: url(/assets/under_construction/site-under-construction-fa/googleplus.png) no-repeat scroll 0 0 }
 
-#slidertext ul li a.flickr {    background: url(flickr.png) no-repeat scroll 0 0 }
+#slidertext ul li a.flickr {    background: url(/assets/under_construction/site-under-construction-fa/flickr.png) no-repeat scroll 0 0 }
 
-#slidertext ul li a.identica {    background: url(identica.png) no-repeat scroll 0 0 }
+#slidertext ul li a.identica {    background: url(/assets/under_construction/site-under-construction-fa/identica.png) no-repeat scroll 0 0 }
 
 #subscribeform {
     margin-top: 20px;
@@ -277,7 +277,7 @@ a.next {
 }
 
 input#email {
-    background: url(mail-bg.png) no-repeat scroll 0 0;
+    background: url(/assets/under_construction/site-under-construction-fa/mail-bg.png) no-repeat scroll 0 0;
     width: 217px;
     height: 42px;
     border: 0 none;
@@ -289,7 +289,7 @@ input#email {
 }
 
 input#submit {
-    background: url(button.png) no-repeat scroll 0 0;
+    background: url(/assets/under_construction/site-under-construction-fa/button.png) no-repeat scroll 0 0;
     width: 92px;
     height: 40px;
     border: 0 none;
