@@ -32,8 +32,8 @@ module UnderConstruction
       stop_schedule if jobs.size > 0
       # To make passenger to restart the application
       FileUtils.touch Rails.root + 'tmp/restart.txt'
-      # After restart server, sends email to subscribers
-      system "bundle exec rake under_construction:send_mails RAILS_ENV=#{Rails.env}"
+      # After restarts server, sends email to subscribers
+      system "cd #{Rails.root}; bundle exec rake under_construction:send_mails RAILS_ENV=#{Rails.env}"
     end
   end
 end
