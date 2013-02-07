@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
                     pages with ability to automatically schedule for launch time.
                     Also it have two default themes and some other fancy things."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["Rakefile", "README.md"]
+  s.files = Dir["{app,config,db,lib,vendor}/**/*"] + ["Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.2"
   s.add_dependency "rufus-scheduler", "~> 2.0"
