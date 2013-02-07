@@ -7,11 +7,9 @@
   <meta http-equiv="refresh" content="60">
 
   <title><%= @info['site_title'] %></title>
-  <%= javascript_include_tag "application" %>
-  <%= stylesheet_link_tag "under_construction/#{@theme}/style.css", :media => "all" %>
-  <%= javascript_include_tag "under_construction/#{@theme}/jquery.countdown.min.js" %>
-  <%= javascript_include_tag "under_construction/#{@theme}/jcarousellite1.0.1_min.js" %>
-  <!-- jquery countdown-->
+
+  <%= javascript_include_tag "under_construction" %>
+  <%= stylesheet_link_tag "under_construction", :media => "all" %>
 
   <script type="text/javascript">
   $(function () {
@@ -30,12 +28,12 @@
   });
   </script><!--script for IE6-image transparency recover-->
   <!--[if IE 6]>
-<script type="text/javascript" src="js/DD_belatedPNG_0.0.7a-min.js"></script>
-<script>
-  /* EXAMPLE */
-  DD_belatedPNG.fix('#logo img,#main,.counter,.twitter,.flickr,.facebook,.youtube,.skype,.stumbleupon, #submit,.prev img,.next img,#email');
-</script>
-<![endif]-->
+    <script type="text/javascript" src="js/DD_belatedPNG_0.0.7a-min.js"></script>
+    <script>
+      /* EXAMPLE */
+      DD_belatedPNG.fix('#logo img,#main,.counter,.twitter,.flickr,.facebook,.youtube,.skype,.stumbleupon, #submit,.prev img,.next img,#email');
+    </script>
+  <![endif]-->
 </head>
 
 <body>

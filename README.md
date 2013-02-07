@@ -93,6 +93,24 @@ Currently two themes are:
 * site-under-construction
 * site-under-construction-fa
 
+Assets
+======
+Every theme has its own asset. First make two directive files in your assets app:
+    /assets/javascripts/under_construction.js
+    /assets/stylesheets/under_construction.css
+
+In stylesheet, you have to include under_construction/*theme* like below:
+    /*
+      *= require under_construction/site-under-construction
+    */
+In javascript, you have to include under_construction/*theme* like below:
+    //= require under_construction/site-under-construction
+
+Note: If you want your under construction works on production mode you must adds
+under_construction.js and under_construction.css in your production env in
+config.assets.precompile like below:
+    config.assets.precompile += %w( under_construction.js under_construction.css )
+
 I18n
 ====
 This gem is using standard Rails I18n translation for the error message generated and name of models.

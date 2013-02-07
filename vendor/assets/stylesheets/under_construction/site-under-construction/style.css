@@ -3,8 +3,8 @@
 
 @font-face {
     font-family: 'PTSansRegular';
-    src: url('fonts/pt-sans/PTS55F-webfont.eot');
-    src: url('fonts/pt-sans/PTS55F-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/pt-sans/PTS55F-webfont.woff') format('woff'), url('fonts/pt-sans/PTS55F-webfont.ttf') format('truetype'), url('fonts/pt-sans/PTS55F-webfont.svg#PTSansRegular') format('svg');
+    src: url('/assets/under_construction/site-under-construction/pt-sans/PTS55F-webfont.eot');
+    src: url('/assets/under_construction/site-under-construction/pt-sans/PTS55F-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/under_construction/site-under-construction/pt-sans/PTS55F-webfont.woff') format('woff'), url('/assets/under_construction/site-under-construction/pt-sans/PTS55F-webfont.ttf') format('truetype'), url('/assets/under_construction/site-under-construction/pt-sans/PTS55F-webfont.svg#PTSansRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
