@@ -1,0 +1,14 @@
+<% 
+def define_class
+  @notice ? 'notice' : 'alert'
+end
+ %>
+// Add the Notice or Error
+$('.flash').addClass("<%= define_class %>").html("<%= j raw @notice ? @notice : @alert %><br><br><a class='back' href='#'>Back</a>");
+// Make the Back Url to work
+$('a.back').on('click', function(e) {
+    e.preventDefault();
+    show_alert.show()
+});
+// show_alert is defined in index.html
+show_alert.show();

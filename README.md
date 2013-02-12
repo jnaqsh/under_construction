@@ -109,6 +109,7 @@ In stylesheet, you have to include under_construction/*theme* like below:
 In javascript, you have to include under_construction/*theme* like below:
 
     //= require under_construction/site-under-construction
+    //= require jquery_ujs
 
 Note: If you want your under construction works on production mode you must adds
 under_construction.js and under_construction.css in your production env in

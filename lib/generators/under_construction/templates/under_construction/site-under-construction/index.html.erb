@@ -4,7 +4,7 @@
   "HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-  <meta http-equiv="refresh" content="60">
+  <!-- <meta http-equiv="refresh" content="60"> -->
 
   <title><%= @info['site_title'] %></title>
 
@@ -34,6 +34,21 @@
       DD_belatedPNG.fix('#logo img,#main,.counter,.twitter,.flickr,.facebook,.youtube,.skype,.stumbleupon, #submit,.prev img,.next img,#email');
     </script>
   <![endif]-->
+  <script type="text/javascript">
+      var show_alert = {
+        show: function() {
+          if ($('div.subcontainer').css('margin-top') == '0px') {
+              $('div.subcontainer').animate({
+                  'margin-top': '-100px',
+              });
+          } else {
+            $('div.subcontainer').animate({
+                'margin-top': '0px',
+            });
+          };
+        },
+      };
+  </script>
 </head>
 
 <body>
@@ -78,8 +93,19 @@
 
               <ul>
                 <li>
-                  <h3><%= @info['inform_by_email'] %></h3>
-                  <%= render partial: 'email_storage/form', object: @email %>
+                  <div class='subcontainer'>
+                    <div class='formcontainer'>
+                    <h3><%= @info['inform_by_email'] %></h3>
+                    <%= render partial: 'email_storage/form', object: @email %>
+                    </div>
+
+                    <div class='noticecontainer'>
+                      <p class='flash'>
+                        There will be Errors to show. Always :/
+                      </p>
+                    </div>
+
+                  </div>
                 </li><!-- Slider item -->
 
                 <li>
