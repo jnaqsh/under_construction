@@ -1,5 +1,6 @@
 theme: 'site-under-construction'
 launch_time: "24 Feb 2050 7:00pm"
+time_zone: "UTC" # Used in scheduler. For opetions, see http://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html
 progress: "60" # Percent
 progress_label: "Progress"
 website_address: "http://example.com"

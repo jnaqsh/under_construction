@@ -5,6 +5,8 @@ module UnderConstruction
     def initialize(*args)
       @scheduler  = Rufus::Scheduler.start_new
       @end_time   = args[0]
+      Time.zone = UnderConstruction.config.time_zone || "UTC"
+      Chronic.time_class = Time.zone
       schedule()
     end
 
