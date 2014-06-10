@@ -20,7 +20,7 @@ class UnderConstructionEmailStorage
     end
 
   validates :email, presence: true, uniqueness: true,
-            format: { with: /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i,
+            format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i,
                       message: I18n.t('activemodel.errors.models.under_construction_email_storage.attributes.email.format', default: "doesn't looks like correct") }
 
   def initialize(attributes = {})

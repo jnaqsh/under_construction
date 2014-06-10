@@ -18,13 +18,13 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib,vendor}/**/*"] + ["Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 3.2"
+  s.add_dependency "rails", "~> 4.0"
   s.add_dependency "rufus-scheduler", "~> 2.0"
   s.add_dependency "chronic", "~> 0.9"
 
   # Devlopment
   s.add_development_dependency "sqlite3"
-  s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "rspec-rails", '2.14.2'
   s.add_development_dependency "guard-rspec"
   s.add_development_dependency "rb-inotify"
   s.add_development_dependency "capybara"
