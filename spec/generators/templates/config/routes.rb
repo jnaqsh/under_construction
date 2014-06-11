@@ -1,5 +1,5 @@
-Dummy::Application.routes.draw do
-  match "under_construction", :to => redirect('/')
+Rails.application.routes.draw do
+  match "under_construction", :to => redirect('/'), via: :all
 
   resources :posts
 
