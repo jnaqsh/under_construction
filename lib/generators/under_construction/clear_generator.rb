@@ -17,15 +17,12 @@ module UnderConstruction
         file_path = 'config/routes.rb'
         gsub_file file_path, /#{Regexp.escape(ROUTES_CONFIG_TXT)}/, ''
         gsub_file file_path, /#{Regexp.escape(ROUTES_REDIRECT_TO_TXT)}/, ''
-        insert_into_file file_path, ROUTES_CLEAR_TXT, after: /Application.routes.draw do/
+        if ::Rails::VERSION::MAJOR >= 4
+          insert_into_file file_path, ROUTES_CLEAR_TXT, after: /Rails.application.routes.draw do/
+        else
+          insert_into_file file_path, ROUTES_CLEAR_TXT, after: /Application.routes.draw do/
+        end
       end
-
-#      def remove_view_files
-#        file_path = 'app/views/under_construction'
-#        if File.exist? file_path
-#          remove_file file_path
-#        end
-#      end
 
       def remove_scheduler_file
         file_path = 'config/initializers/under_construction_scheduler.rb'
