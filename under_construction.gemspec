@@ -30,5 +30,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "capybara"
   s.add_development_dependency "ammeter"
   s.add_development_dependency "pry", ['~> 0.9']
-  s.add_development_dependency "pry-debugger", ['0.2.2']
+  s.add_development_dependency "pry-nav", ['~> 0.2.3']
 end
