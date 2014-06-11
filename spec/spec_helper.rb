@@ -6,14 +6,18 @@ require 'ammeter/init'
 require 'rspec/autorun'
 # require 'factory_girl_rails'
 require 'capybara/rspec'
+require 'pry'
+require 'support/copy_file'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
-Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+# Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+I18n.enforce_available_locales = true if I18n.respond_to?(:enforce_available_locales)
 
 RSpec.configure do |config|
   config.filter_run focus: true
   config.run_all_when_everything_filtered = true
+  config.include CopyFile
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:

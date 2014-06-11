@@ -112,11 +112,21 @@ In javascript, you have to include under_construction/*theme* like below:
     //= require under_construction/site-under-construction
     //= require jquery_ujs
 
-Note: If you want your under construction works on production mode you must adds
+Make a file in `config/initializers` named `assets.rb` and put follwing code inside it or Rails 4 may:
+
+    Rails.application.config.assets.precompile += %w( under_construction.js under_construction.css )
+
+Rails 3 Note: If you want your under construction works on production mode you must adds
 under_construction.js and under_construction.css in your production env in
 config.assets.precompile like below:
 
     config.assets.precompile += %w( under_construction.js under_construction.css )
+
+Rails 4
+=======
+
+* Don't forget to add `config/initializers/assets.rb` file or Rails will throw an error
+* The scheduler will run `clear` task instantly if the date provided is past. Because of Rails 4 `spring` feature that keeps Rails loaded, when testing, the `clear` task may run repeatedly. So please make sure you stop `spring` everytime you change the time in `under_construction.yml`.
 
 I18n
 ====
