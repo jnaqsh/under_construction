@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name        = "under_construction"
   s.version     = UnderConstruction::VERSION
   s.authors     = ["Arash Mousavi", "Hamed Ramezanian"]
-  s.email       = ["mousavi.arash@gmail.com", "h.ramezanian@jnaqsh.com"]
+  s.email       = ["mousavi.arash@gmail.com", "hamed.r.nik@gmail.com"]
   s.homepage    = "https://github.com/jnaqsh/under_construction"
   s.summary     = "A rails GEM to automaticaly moderate under construction
                     pages with ability to automatically schedule for launch time"
