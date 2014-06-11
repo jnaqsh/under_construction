@@ -4,6 +4,7 @@ require File.expand_path('../boot', __FILE__)
 require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
+require "action_view/railtie"
 #R4.0: require "active_resource/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
