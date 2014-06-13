@@ -112,7 +112,7 @@ In javascript, you have to include under_construction/*theme* like below:
     //= require under_construction/site-under-construction
     //= require jquery_ujs
 
-Make a file in `config/initializers` named `assets.rb` and put follwing code inside it or Rails 4 may:
+Make a file in `config/initializers` named `assets.rb` and put following code inside it or Rails 4 may:
 
     Rails.application.config.assets.precompile += %w( under_construction.js under_construction.css )
 
