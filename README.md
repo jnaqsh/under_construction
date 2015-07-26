@@ -1,3 +1,6 @@
+
+**This GEM is not under active development. It's best to not use it at all.**
+
 under_construction
 ==================
 
